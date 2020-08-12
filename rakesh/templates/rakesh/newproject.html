@@ -1,0 +1,86 @@
+{% extends "rakesh/layout.html" %}
+{% load static %}
+{% block body %}
+
+<main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>New Project</h2>
+            </div>
+            <div class="justify-content-center">
+                <!-- <div class="col-lg-8 mt-5 mt-lg-0"> -->
+
+                <form action="/added" method="post" role="form" class="php-email-form">
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="pname" class="form-control" id="name" placeholder="Project Name"
+                                data-rule="minlen:5" data-msg="Enter full name of Project" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" class="form-control" name="pclient" id="email"
+                                placeholder="Coustomer Name" data-rule="minlen:3" data-msg="Enter Coustomer name" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="plocation" class="form-control" id="name"
+                                placeholder="Project Location" data-rule="minlen:2" data-msg="Enter Project Location" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" class="form-control" name="pcetegory" id="email"
+                                placeholder="Project Cetegory" data-rule="minlen:2" data-msg="Enter Project Cetegory" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="prole" class="form-control" id="name" placeholder="Project Role"
+                                data-rule="minlen:2" data-msg="Enter your role" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" class="form-control" name="pcompany" id="email"
+                                placeholder="Your Company" data-rule="minlen:2" data-msg="Enter your company" />
+{#                            <div class="validate"></div>#}
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                            data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        <div class="validate"></div>
+                    </div> -->
+                    <div class="form-group">
+                        <textarea class="form-control" name="pdetails" rows="5" data-rule="required"
+                            data-msg="Please write something about Project"
+                            placeholder="Project Discription"></textarea>
+{#                        <div class="validate"></div>#}
+                    </div>
+                    <!-- <div class="mb-3">
+                        <div class="loading">Saving</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your project has been added. Thank you!</div>
+                    </div> -->
+                    <div class="text-center"><input type="submit"> </div>
+                </form>
+{#                <button type="submit">Add Project</button>#}
+                <!-- </div> -->
+            </div>
+
+            <!-- </div> -->
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+{% endblock %}

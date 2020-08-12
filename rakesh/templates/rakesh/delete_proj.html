@@ -1,0 +1,17 @@
+{% extends 'rakesh/layout.html' %}
+{% load static %}
+{% block body %}
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+      <p>do you want to delete {{ project.name }}?</p>
+      <form action="" method="post">
+          {% csrf_token %}
+          <a href="{% url 'dashboard' %}" class="btn btn-sm btn-warning"> Cancel </a>
+                     <input type="submit" class="btn btn-sm btn-danger">
+      </form>
+  </section>
+</main>
+
+{% endblock %}

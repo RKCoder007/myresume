@@ -1,0 +1,18 @@
+{% extends 'rakesh/layout.html' %}
+{% load static %}
+{% block body %}
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+      <form action="" method="POST", enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          <input type="submit">
+      </form>
+  </section>
+</main>
+
+{% endblock %}

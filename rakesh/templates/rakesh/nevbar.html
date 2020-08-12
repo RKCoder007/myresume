@@ -1,0 +1,38 @@
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <h1 class="logo"><a href="{% url 'home' %}">Rakesh</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <!-- class="active" -->
+                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="active"><a href="{% url 'about' %}">About</a></li>
+                    <li class="active"><a href="{% url 'resume'%}">Resume</a></li>
+{#                    <li class="active"><a href="{% url 'services'%}">xyz</a></li>#}
+                    <li class="active"><a href="{% url 'projects'%}">Projects</a></li>
+                    <li class="active"><a href="{% url 'contact'%}">Contact</a></li>
+                    {% if request.user.username == 'rakesh124' %}
+                    <li class="active"><a href="{% url 'dashboard'%}">Admin-Dashboard</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                    <li class="active"><a href="{% url 'logout'%}">Logout</a></li>
+                    {% endif %}
+{#                    <li class="hello-msg">Hello , {{ request.user }}</li>#}
+{#                    <li> <a class="hello-msg" href="{% url 'logout' %}">Logout</a> </li>#}
+                </ul>
+            </nav><!-- .nav-menu -->
+
+            <div class="header-social-links">
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+            </div>
+
+        </div>
+
+    </header><!-- End Header -->
