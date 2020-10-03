@@ -20,11 +20,11 @@
             <h4>{{ web_content.my_name}}</h4>
             <p><em>{{ web_content.about_headline}}</em></p>
             <p>
-{#            <ul>#}
-{#              <li>Portland par 127,Orlando, FL</li>#}
-{#              <li>(123) 456-7891</li>#}
-{#              <li>alice.barkley@example.com</li>#}
-{#            </ul>#}
+              {#            <ul>#}
+              {#              <li>Portland par 127,Orlando, FL</li>#}
+              {#              <li>(123) 456-7891</li>#}
+              {#              <li>alice.barkley@example.com</li>#}
+              {#            </ul>#}
             </p>
           </div>
 
@@ -37,7 +37,7 @@
           </div>
           <div class="resume-item">
             <h4>{{ web_content.education2_name}}</h4>
-            <h5>{{ web_content.education1_year}}</h5>
+            <h5>{{ web_content.education2_year}}</h5>
             <p><em>{{ web_content.education1_univ_name}}</em></p>
             <p>{{ web_content.education1_board}}</p>
           </div>
@@ -70,8 +70,8 @@
             </p>
 
           </div>
-            {% if web_content.exp3_profile is not None %}
-            <div class="resume-item">
+          {% if web_content.exp3_profile is not None %}
+          <div class="resume-item">
             <h4>{{ web_content.exp3_profile}}</h4>
             <h5>{{ web_content.exp3_duration}}</h5>
             <p><em>{{ web_content.exp3_company}}</em></p>
@@ -85,10 +85,10 @@
             {% endif %}
 
 
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
   </section><!-- End Resume Section -->
 
 </main><!-- End #main -->
